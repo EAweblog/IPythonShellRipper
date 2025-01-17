@@ -22,7 +22,8 @@ def upload_to_catbox(fp):
         response = requests.post(url, data=data, files={"fileToUpload": file})
     if response.status_code == 200:
         print("File uploaded to catbox.moe successfully!")
-        print("Download link:", response.text.strip())
+        print("Download link:")
+        print(response.text.strip())
     else:
         print(f"Failed to upload to catbox.moe. Status code: {response.status_code}")
 
