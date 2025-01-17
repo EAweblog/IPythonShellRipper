@@ -30,6 +30,6 @@ def upload_to_catbox(zip_buffer):
 
 def main():
     zip_buffer = zip_files_to_memory()
-    upload_to_catbox(output_zip)
+    upload_to_catbox(zip_buffer)
 
 main()
